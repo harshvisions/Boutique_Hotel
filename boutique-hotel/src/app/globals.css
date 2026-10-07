@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #1A3636;
+  --color-accent: #D4AF37;
+  --color-background: #FDFBF7;
+  --color-foreground: #1A3636;
+  
+  --font-serif: var(--font-playfair), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+:root {
+  --background: #FDFBF7;
+  --foreground: #1A3636;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar to look premium */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FDFBF7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1A3636;
+}
+
+/* Base utility for glassmorphism */
+.glass {
+  background: rgba(253, 251, 247, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(26, 54, 54, 0.05);
+}
+
+.glass-dark {
+  background: rgba(26, 54, 54, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
